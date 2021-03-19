@@ -1,5 +1,8 @@
 # Cloudinary Business Development Product Gallery
 
+The instructions given below are solely with reference to the Partner training module "Using Videos on eCommerce Product Detail Pages".
+Utilize these instructions to perform the steps demonstrated within the course.
+
 ## Prerequisites 
 
 To perform the steps shown in the demonstrations within the course, you will need:  
