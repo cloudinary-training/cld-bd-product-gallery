@@ -72,16 +72,48 @@ Under the Security tab, de-select the Resource list checkbox as shown below.
 
 ![Resource list](./images/resource-list.png)
 
-Scroll to the bottom of the page and click Save.
+Scroll to the bottom of the page and click Save.  
+
+
 Back in repl.it instance, change the cloudName field with the cloud name of your account. You can find the cloud name from your Cloudinary DAM account. Given below is an image for reference:
 
-![Cloudname in dashboard](./images/cloud-name.png)
+![Cloud name in dashboard](./images/cloud-name.png)
 
-Delete the tag field that is used to retrieve image assets with the tag “position_1” from an account. Note that your account does not have images yet, hence this line is not needed. 
-OPTIONAL: You can use the uploader method to upload images and then declare the tags you use while uploading the image assets. Your product gallery will then display the video asset as well as the images you upload to your cloud.
+Here is the code that you will change so that you are serving the media that you uploaded.  Change `cld-partner-training` to your cloudname.
+
+```JavaScript
+ document.addEventListener("DOMContentLoaded", event => {
+              cloudinary.galleryWidget({
+                container: '#wrap',
+                cloudName: 'cld-partner-training',
+                mediaAssets: [
+                  {
+                    tag: "position_1", mediaType: "video", transformation: {
+                      fetch_format: "auto",
+                      transformation: { quality: "auto" }
+                    }
+                  },
+                  {
+                    tag: "position_1", transformation: {
+                      fetch_format: "auto",
+                      transformation: { quality: "auto" }
+                    } // by default mediaType: "image"
+                  }
+                ],
+                carouselStyle: 'thumbnails',
+                displayProps: {
+                  mode: 'expanded',
+                  columns: 1,
+                  spacing: 15
+                },
+
+              }).render();
+            });
+```
 
 
-Additional Resources
+
+### Additional Resources
 
 [How to integrate Cloudinary into your application](https://cloudinary.com/documentation/how_to_integrate_cloudinary) 
 
