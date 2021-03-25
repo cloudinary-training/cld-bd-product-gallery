@@ -25,7 +25,6 @@ c. Copy-paste the repo link in the Paste any repository URL field.
 
 ![Import from GitHub](./images/github-import.png)
 
-You can import the GitHub repo of the uploader function: https://github.com/cloudinary-training/cld-bd-product-gallery by following the same steps (2a - 2c).  
 
 ## Note
 The eCommerce web page is the front-end or the client-side, whereas the upload functionality is a back-end project which runs on node.js. Both projects can run JavaScript. Yet, the web page or browser JavaScript and the node.js server JavaScript each have some unique features. To put them both together in a single repl.it instance would require full stack functionality, which means that it can run from the server to the browser. 
